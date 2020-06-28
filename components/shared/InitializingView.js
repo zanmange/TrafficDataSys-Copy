@@ -34,13 +34,13 @@ class InitializingView extends Component {
     return (
       <div className="initializing-view pt-20 pb-20 pr-12 pl-12">
         {!this.props.requestedFileRecording && !this.props.droppedFile &&
-          <h2 className="text-white text-3xl font-bold">Initializing OpenDataCam</h2>
+          <h2 className="text-white text-3xl font-bold">Initialisation de Traffic Data Sys</h2>
         }
         {this.props.requestedFileRecording &&
-          <h2 className="text-white text-3xl font-bold">Restarting to process video file {this.props.fileName.split("/").pop()}</h2>
+          <h2 className="text-white text-3xl font-bold">Redémarrage pour traiter le flux vidéo {this.props.fileName.split("/").pop()}</h2>
         }
         {this.props.droppedFile &&
-          <h2 className="text-white text-3xl font-bold">Uploading and restarting on dropped video file</h2>
+          <h2 className="text-white text-3xl font-bold">Téléchargement et redémarrage sur le flux vidéo déposé</h2>
         }
         <div className="w-1/5 mt-5 h-5 progress-bar rounded overflow-hidden">
           <div className="shadow w-full h-full bg-gray-900">
@@ -53,7 +53,7 @@ class InitializingView extends Component {
         </div>
         {!this.state.showConsole &&
           <button className="btn btn-light mt-10 rounded" onClick={() => this.setState({showConsole: true})}>
-            Show details
+            Afficher details
           </button>
         }
         {this.state.showConsole &&
@@ -62,14 +62,14 @@ class InitializingView extends Component {
               className="btn btn-light rounded cursor-pointer"
               onClick={() => this.setState({showConsole: false})}
             >
-              Hide details
+              Cacher details
             </a>
             <a
               className="ml-2 btn btn-light rounded"
               target="_blank"
               href="/console"
             >
-              Download logs
+              Telecharger logs
             </a>
           </div>
         }
